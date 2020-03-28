@@ -1,12 +1,12 @@
 export const SET_FAV = "SET_FAV";
 export const REMOVE_FAV = "REMOVE_FAV";
 
-export const setFavorite = (round) => ({
+export const setFavorite = (season) => ({
   type: SET_FAV,
-  payload: round
+  payload: season
 });
 
-export const removeFavorite = (round) => ({
+export const removeFavorite = (season) => ({
   type: REMOVE_FAV,
-  payload: round
+  payload: season
 });

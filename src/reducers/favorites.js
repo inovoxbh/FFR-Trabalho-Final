@@ -4,7 +4,7 @@ import {
   } from "../actions/favActions.js";
   
   const initialState = {
-    favRounds: []
+    favSeasons: []
   };
   
   export const favoritesreducer = (state = initialState, action) => {
@@ -12,13 +12,13 @@ import {
       case SET_FAV:
         return {
           ...state,
-          favRounds: state.favRounds.concat(action.payload)
+          favSeasons: state.favSeasons.concat(action.payload)
         };
       case REMOVE_FAV:
         return {
           ...state,
-          favRounds: state.favRounds.filter(round => {
-              if (round.id !== action.payload.id)
+          favSeasons: state.favSeasons.filter(season => {
+              if (season !== action.payload)
                 return true;
               
               return false;

@@ -5,13 +5,17 @@ export const useSeasons = () => {
     const [seasons,setSeasons] = useState([]);
 
     const getSeasons = async () => {
-      const seasonsResults = await f1Services.getSeasons();
+      const s = await f1Services.getSeasons();
+      const ascSeasons =s.data.MRData.SeasonTable.Seasons; // retorna temporadas em ordem crescente
 
-      const arraylength =seasonsResults.length;
+      console.log(ascSeasons);
+      
+      const descSeasons = [];
+      ascSeasons.map((s,i) => (descSeasons[ascSeasons.length-1-i] = s.season)) // array com temporadas em ordem descendente
 
-      console.log(arraylength);
+      console.log(descSeasons);
 
-      setSeasons(seasonsResults.data.MRData.SeasonTable.Seasons);
+      setSeasons(descSeasons); // retorna o array com temporadas descendente
     };
 
     useEffect(() => {
