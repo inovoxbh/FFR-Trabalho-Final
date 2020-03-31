@@ -8,7 +8,7 @@ export const Season = ( {season} ) => {
     
     return <div>
         <p>
-            <Link to={`/${season}`}>Temporada {season}</Link>
+            <Link to={`/season/${season}`}>Temporada {season}</Link>
             <button onClick={() => dispatch(setFavorite(season))}>Favorite</button>
             <button onClick={() => dispatch(removeFavorite(season))}>Unfavorite</button>
         </p>

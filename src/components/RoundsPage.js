@@ -3,12 +3,9 @@ import { useRounds } from "../hooks/useRounds.js"
 import { Round } from "./Round.js"
 
 export const RoundsPage = (props) => {
-    console.log("antesuseRounds")
+    console.log(props.match.params.seasonid)
     const rounds = useRounds(props.match.params.seasonid);
-    console.log("aposuseRounds")
-
-    console.log("conteudo_do_props")
-    console.log(props)
+    console.log(rounds)
     
     return (
       <div>

@@ -1,24 +1,27 @@
-import {useState,useEffect} from "react";
-import {f1Services} from "../services/f1Services.js";
+import { useState, useEffect } from "react";
+import { f1Services } from "../services/f1Services.js";
 
 export const useSeasons = () => {
-    const [seasons,setSeasons] = useState([]);
 
-    const getSeasons = async () => {
-      const s = await f1Services.getSeasons();
-      const ascSeasons =s.data.MRData.SeasonTable.Seasons; // retorna temporadas em ordem crescente
+  
 
-      const descSeasons = [];
-      ascSeasons.map((s,i) => (descSeasons[ascSeasons.length-1-i] = s.season)) // array com temporadas em ordem descendente
+  const [seasons, setSeasons] = useState([]);
 
-      console.log(descSeasons);
+  const getSeasons = async () => {
+    const s = await f1Services.getSeasons();
+    const ascSeasons = s.data.MRData.SeasonTable.Seasons; // retorna temporadas em ordem crescente
 
-      setSeasons(descSeasons); // retorna o array com temporadas descendente
-    };
+    const descSeasons = [];
+    ascSeasons.map((s, i) => (descSeasons[ascSeasons.length - 1 - i] = s.season)) // array com temporadas em ordem descendente
 
-    useEffect(() => {
-        getSeasons();
-    },[]);
+    console.log(descSeasons);
 
-    return seasons;
+    setSeasons(descSeasons); // retorna o array com temporadas descendente
+  };
+
+  useEffect(() => {
+    getSeasons();
+  }, []);
+
+  return seasons;
 };
