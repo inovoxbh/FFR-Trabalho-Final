@@ -11,8 +11,13 @@ export class f1Services {
         return axios(f1Services._withBaseUrl("seasons.json"));
     }
 
-    static getRounds() {
-        return axios("http://ergast.com/api/f1/2019.json");
+    static getRounds(props) {
+        console.log("conteudo_do_props_no_f1Services")
+        console.log(props)
+    
+        return axios(f1Services._withBaseUrl(`${props}.json`));
+
+        // return axios("http://ergast.com/api/f1/2019.json");
     }
 
     // static getMovieById(movieId) {
