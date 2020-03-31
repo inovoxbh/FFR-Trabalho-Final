@@ -11,6 +11,10 @@ export class f1Services {
         return axios(f1Services._withBaseUrl("seasons.json"));
     }
 
+    static getRounds() {
+        return axios("http://ergast.com/api/f1/2019.json");
+    }
+
     // static getMovieById(movieId) {
     //     return axios(f1Services._withBaseUrl(`movie/${movieId}`));
     // }
