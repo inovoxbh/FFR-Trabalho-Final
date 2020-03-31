@@ -8,8 +8,6 @@ export const useSeasons = () => {
       const s = await f1Services.getSeasons();
       const ascSeasons =s.data.MRData.SeasonTable.Seasons; // retorna temporadas em ordem crescente
 
-      console.log(ascSeasons);
-      
       const descSeasons = [];
       ascSeasons.map((s,i) => (descSeasons[ascSeasons.length-1-i] = s.season)) // array com temporadas em ordem descendente
 

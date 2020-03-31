@@ -4,7 +4,9 @@ import { useSeasons } from "../hooks/useSeasons.js"
 import { Season } from "./Season.js"
 
 export const SeasonsPage = () => {
+    console.log("antesUseSeasons")
     const seasons = useSeasons();
+    console.log("aposUseSeasons")
     
     return (
       <div>
