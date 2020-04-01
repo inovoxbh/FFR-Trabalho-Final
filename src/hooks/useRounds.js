@@ -6,16 +6,15 @@ export const useRounds = (props) => {
 
     const getRounds= async () => {
       const r = await f1Services.getRounds(props);
+      
       const responseRounds =r.data.MRData.RaceTable.Races;
-
-      console.log(responseRounds);
 
       setRounds(responseRounds);
     };
 
     useEffect(() => {
         getRounds();
-    },[]);
+    },[props]);
 
     return rounds;
 };

@@ -7,6 +7,6 @@ export const ApplicationRoutes = () => (
     <Route path="/" exact component={HomePage} />
     <Route path="/seasons" exact component={SeasonsPage} />
     <Route path="/favorites" exact component={FavoritesPage} />
-    <Route path="/:seasonid" exact component={RoundsPage} />
+    <Route path="/seasons/:seasonid" exact component={RoundsPage} />
   </>
 );

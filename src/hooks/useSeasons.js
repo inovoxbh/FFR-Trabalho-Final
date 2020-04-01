@@ -11,8 +11,6 @@ export const useSeasons = () => {
       const descSeasons = [];
       ascSeasons.map((s,i) => (descSeasons[ascSeasons.length-1-i] = s.season)) // array com temporadas em ordem descendente
 
-      console.log(descSeasons);
-
       setSeasons(descSeasons); // retorna o array com temporadas descendente
     };
 
