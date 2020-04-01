@@ -5,19 +5,19 @@ import {Header} from "../components/Header.js";
 import { useDispatch } from "react-redux";
 import {setPagAnterior} from "../actions/pagAntAction.js";
 import { useSelector } from "react-redux";
+import {useEffect} from "react";
+
 
 
 export const SeasonsPage = () => {
     const seasons = useSeasons();
     const dispatch = useDispatch();
 
-    console.log(window.location.href)
-    console.log(window.location.pathname)
-
-//    dispatch(setPagAnterior(window.location.pathname))
     const {pagAnterior} = useSelector(state => state.pagAntReducer);
     console.log('Página anterior: ' + pagAnterior)
-
+    useEffect(() => {
+      dispatch(setPagAnterior(window.location.pathname))
+    },[]);
     
     return (
       <div>

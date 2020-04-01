@@ -2,9 +2,6 @@ import React from "react";
 import {Header} from "../components/Header.js";
 
 export const HomePage = () => {
-    console.log(window.location.href) 
-    console.log(window.location.pathname) 
-    
     return (
       <div>
         <Header />

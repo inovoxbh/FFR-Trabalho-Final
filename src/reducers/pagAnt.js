@@ -2,16 +2,15 @@ import {
     SET_ANT
   } from "../actions/pagAntAction.js";
   
-  const initialState = {
-    pagAnterior: {}
-  };
-  
-  export const pagAntReducer = (state = initialState, action) => {
+  export const pagAntReducer = (state = {}, action) => {
+    console.log("entrou no reducer de pagina anterior")
+    console.log("action do reducer: " + action.type)
+    console.log("payload do reducer: " + action.payload)
     switch (action.type) {
       case SET_ANT:
           return {
             ...state,
-            favSeasons: action.payload
+            pagAnterior: action.payload
           };
 
         default:
