@@ -1,6 +1,6 @@
 import React from "react";
 import { useRounds } from "../hooks/useRounds.js"
-import { Round } from "./Round.js"
+import { Round } from "../components/Round.js"
 
 export const RoundsPage = (props) => {
     const rounds = useRounds(props.match.params.seasonid);

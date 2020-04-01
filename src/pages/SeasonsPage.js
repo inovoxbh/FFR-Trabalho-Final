@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSeasons } from "../hooks/useSeasons.js"
-import { Season } from "./Season.js"
+import { Season } from "../components/Season.js"
 
 export const SeasonsPage = () => {
     const seasons = useSeasons();

@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { HomePage, SeasonsPage, FavoritesPage, RoundsPage } from "./components";
+import { HomePage, SeasonsPage, FavoritesPage, RoundsPage } from "./pages";
 
 export const ApplicationRoutes = () => (
   <>
