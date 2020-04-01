@@ -2,6 +2,7 @@ import React from "react";
 import { useSeasons } from "../hooks/useSeasons.js"
 import { Season } from "../components/Season.js"
 import {Header} from "../components/Header.js";
+import {NavBar} from "../components/NavBar.js";
 import {Footer} from "../components/Footer.js";
 
 export const SeasonsPage = () => {
@@ -10,7 +11,8 @@ export const SeasonsPage = () => {
     return (
       <div>
         <Header />                
-        <h1>Temporadas</h1>
+        <NavBar />
+        <h2>Temporadas</h2>
         <ul style={{ listStyleType: "none" }}>
           {seasons.map(season => (
                               <li key={season}>

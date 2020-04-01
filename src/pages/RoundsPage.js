@@ -2,6 +2,7 @@ import React from "react";
 import { useRounds } from "../hooks/useRounds.js"
 import { Round } from "../components/Round.js"
 import {Header} from "../components/Header.js";
+import {NavBar} from "../components/NavBar.js";
 import {Footer} from "../components/Footer.js";
 
 
@@ -11,7 +12,8 @@ export const RoundsPage = (props) => {
     return (
       <div>
         <Header />        
-        <h1>Corridas</h1>
+        <NavBar />
+        <h2>Corridas</h2>
         <ul style={{ listStyleType: "none" }}>
           {rounds.map(r => (
                               <li key={r.round}>

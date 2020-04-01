@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import {Header} from "../components/Header.js";
+import {NavBar} from "../components/NavBar.js";
 import {Footer} from "../components/Footer.js";
 
 
@@ -10,7 +11,8 @@ export const FavoritesPage = () => {
     return (
         <div>
             <Header />
-            <h1>Temporadas Favoritas</h1>
+            <NavBar />
+            <h2>Temporadas Favoritas</h2>
             <ol>
                 {favSeasons.map((favRound,i) => (<li key={i}> Season: {favRound} </li>))}
             </ol>
