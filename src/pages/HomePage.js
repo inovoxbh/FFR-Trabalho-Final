@@ -8,7 +8,7 @@ export const HomePage = () => {
         <div>
           <Header />
           <NavBar />
-          <p>Todo sobre as temporadas da fórmula 1!</p>
+          <p>Tudo sobre as temporadas da fórmula 1!</p>
           <Footer />
         </div>
       )
