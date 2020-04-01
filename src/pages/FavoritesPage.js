@@ -5,6 +5,9 @@ import {Header} from "../components/Header.js";
 export const FavoritesPage = () => {
     const {favSeasons} = useSelector(state => state.favoritesreducer); /* extraiu apenas a propriedade favSeasons do state.favoritesreducer */
 
+    console.log(window.location.href)
+    console.log(window.location.pathname)
+
     return (
         <div>
             <Header />

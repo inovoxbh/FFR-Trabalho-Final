@@ -5,6 +5,9 @@ import {Header} from "../components/Header.js";
 
 export const RoundsPage = (props) => {
     const rounds = useRounds(props.match.params.seasonid);
+
+    console.log(window.location.href)
+    console.log(window.location.pathname)
     
     return (
       <div>
