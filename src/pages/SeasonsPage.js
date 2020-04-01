@@ -2,6 +2,7 @@ import React from "react";
 import { useSeasons } from "../hooks/useSeasons.js"
 import { Season } from "../components/Season.js"
 import {Header} from "../components/Header.js";
+import {Footer} from "../components/Footer.js";
 
 export const SeasonsPage = () => {
     const seasons = useSeasons();
@@ -17,6 +18,7 @@ export const SeasonsPage = () => {
                               </li>
                             ))}
         </ul>
+        <Footer />
       </div>
     )
 
