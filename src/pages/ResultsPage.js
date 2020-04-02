@@ -8,11 +8,11 @@ import {Footer} from "../components/Footer.js";
 
 export const ResultsPage = (props) => {
     console.log("props do ResultsPage: " + props)
+
     const params = {
         seasonid: props.match.params.seasonid,
         roundid: props.match.params.roundid
     }
-    console.log("params do ResultsPage: " + params)
     const raceResults = useRaceResults(params);
 
     return (
