@@ -7,7 +7,8 @@ import {Footer} from "../components/Footer.js";
 
 
 export const RoundsPage = (props) => {
-    const rounds = useRounds(props.match.params.seasonid);
+    const season =props.match.params.seasonid;
+    const rounds = useRounds(season);
 
     return (
       <div>
@@ -17,7 +18,7 @@ export const RoundsPage = (props) => {
         <ul style={{ listStyleType: "none" }}>
           {rounds.map(r => (
                               <li key={r.round}>
-                                  <Round round={r.round} raceName={r.raceName} date={r.date} />
+                                  <Round round={r.round} raceName={r.raceName} date={r.date} season={season} />
                               </li>
                             ))}
         </ul>

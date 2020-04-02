@@ -9,7 +9,7 @@ export const useRaceResults = (props) => {
       
       const responseRaceResults =r.data.MRData.RaceTable.Races.Results;
 
-      setRounds(setRaceResults);
+      setRaceResults(responseRaceResults);
     };
 
     useEffect(() => {
