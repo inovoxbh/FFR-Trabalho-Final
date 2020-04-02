@@ -3,3 +3,4 @@ export { SeasonsPage } from "./SeasonsPage";
 export { FavoritesPage } from "./FavoritesPage";
 export { RoundsPage } from "./RoundsPage";
 export { ResultsPage } from "./ResultsPage";
+export { TeamsPage } from "./TeamsPage";

@@ -4,7 +4,7 @@ import { GridPosition } from "../components/GridPosition.js"
 import {Header} from "../components/Header.js";
 import {NavBar} from "../components/NavBar.js";
 import {Footer} from "../components/Footer.js";
-
+import { Link } from "react-router-dom";
 
 export const ResultsPage = (props) => {
     const paramsUrl = {
@@ -19,6 +19,7 @@ export const ResultsPage = (props) => {
       <div>
         <Header />        
         <NavBar />
+        <Link to={`/seasons/${paramsUrl.seasonid}/rounds`}>Temporada {paramsUrl.seasonid}</Link>
         <h2>Resultado</h2>
         {temResultados > 0 ? 
             <ul style={{ listStyleType: "none" }}>
@@ -29,7 +30,7 @@ export const ResultsPage = (props) => {
                                         driverGivenName={r.Driver.givenName}
                                         driverFamilyName={r.Driver.familyName}
                                         driverNationality={r.Driver.nationality}
-                                        constructorName={r.Constructor.Name}
+                                        constructorName={r.Constructor.name}
                                     />
                                   </li>
                                 ))}

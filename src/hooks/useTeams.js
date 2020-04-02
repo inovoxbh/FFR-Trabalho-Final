@@ -7,7 +7,10 @@ export const useTeams = (props) => {
     const getTeams= async () => {
       const r = await f1Services.getTeams(props);
       
-      const responseTeams =r.data.MRData.ConstructorTable.Constructors;
+      var responseTeams = []
+      if (r.data.MRData.ConstructorTable.Constructors.length >0) {
+          responseTeams =r.data.MRData.ConstructorTable.Constructors;
+      }
 
       setTeams(responseTeams);
     };

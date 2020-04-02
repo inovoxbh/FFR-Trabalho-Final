@@ -9,12 +9,9 @@ export const useRaceResults = (props) => {
 
       var responseRaceResults = []
       if (r.data.MRData.RaceTable.Races.length >0) {
-          console.log("tem corrida")
           responseRaceResults =r.data.MRData.RaceTable.Races[0].Results;
-      } else {
-          console.log("NÃO tem corrida")
       }
-
+      
       setRaceResults(responseRaceResults);
     };
 

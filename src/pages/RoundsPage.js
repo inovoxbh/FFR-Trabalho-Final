@@ -5,7 +5,6 @@ import {Header} from "../components/Header.js";
 import {NavBar} from "../components/NavBar.js";
 import {Footer} from "../components/Footer.js";
 
-
 export const RoundsPage = (props) => {
     const season =props.match.params.seasonid;
     const rounds = useRounds(season);
