@@ -16,10 +16,10 @@ export class f1Services {
     }
 
     static getRaceResult(props) {
-        return axios(f1Services._withBaseUrl(`${props.season}/${props.round}/results.json`));
+        return axios(f1Services._withBaseUrl(`${props.seasonid}/${props.roundid}/results.json`));
     }
 
     static getTeams(props) {
-        return axios(f1Services._withBaseUrl(`${props.season}/${props.round}/constructors.json`));
+        return axios(f1Services._withBaseUrl(`${props.seasonid}/${props.roundid}/constructors.json`));
     }
 }

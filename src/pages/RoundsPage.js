@@ -10,11 +10,13 @@ export const RoundsPage = (props) => {
     const season =props.match.params.seasonid;
     const rounds = useRounds(season);
 
+    console.log("RoundsPage")
+
     return (
       <div>
         <Header />        
         <NavBar />
-        <h2>Corridas</h2>
+        <h2>Corridas da temporada {season} </h2>
         <ul style={{ listStyleType: "none" }}>
           {rounds.map(r => (
                               <li key={r.round}>

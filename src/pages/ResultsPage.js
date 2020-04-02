@@ -7,32 +7,36 @@ import {Footer} from "../components/Footer.js";
 
 
 export const ResultsPage = (props) => {
-    console.log("props do ResultsPage: " + props)
-
-    const params = {
+    const paramsUrl = {
         seasonid: props.match.params.seasonid,
         roundid: props.match.params.roundid
     }
-    const raceResults = useRaceResults(params);
+
+    const raceResults = useRaceResults(paramsUrl);
+    const temResultados =raceResults.length;
 
     return (
       <div>
         <Header />        
         <NavBar />
         <h2>Resultado</h2>
-        <ul style={{ listStyleType: "none" }}>
-          {raceResults.map(r => (
-                              <li key={r.position}>
-                                <GridPosition
-                                    position={r.position}
-                                    driverGivenName={r.Driver.givenName}
-                                    driverFamilyName={r.Driver.familyName}
-                                    driverNationality={r.Driver.nationality}
-                                    constructorName={r.Constructor.Name}
-                                />
-                              </li>
-                            ))}
-        </ul>
+        {temResultados > 0 ? 
+            <ul style={{ listStyleType: "none" }}>
+              {raceResults.map(r => (
+                                  <li key={r.position}>
+                                    <GridPosition
+                                        position={r.position}
+                                        driverGivenName={r.Driver.givenName}
+                                        driverFamilyName={r.Driver.familyName}
+                                        driverNationality={r.Driver.nationality}
+                                        constructorName={r.Constructor.Name}
+                                    />
+                                  </li>
+                                ))}
+            </ul>
+            :
+            <p>Não foram localizados resultados para a corrida {paramsUrl.roundid} na temporada {paramsUrl.seasonid}.</p>
+        }
         <Footer />
       </div>
     )
