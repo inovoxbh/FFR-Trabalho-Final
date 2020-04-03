@@ -9,7 +9,7 @@ https://formulaone.netlify.com
 [Bruno Gonçalves de Alcântara](https://github.com/inovoxbh), com ilustre colaboração de [Enrique Bonifácio](https://github.com/enriqueboni80) @enriqueboni80
 
 #### Integrante do projeto
-Bruno Gonçalves, matrícula 616918.
+Bruno Gonçalves, matrícula 616968.
 
 #### Resumo
 O projeto consiste em uma aplicação para exibir informações da Fórmula 1. É possível visualizar todas as temporadas desde 1950, consultas as corridas, grid de chegadas e equipes/construtores.
