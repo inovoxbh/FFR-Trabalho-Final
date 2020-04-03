@@ -4,12 +4,22 @@ import { Round } from "../components/Round.js"
 import {Header} from "../components/Header.js";
 import {NavBar} from "../components/NavBar.js";
 import {Footer} from "../components/Footer.js";
+import {setRounds} from "../actions/roundsActions";
+import { useDispatch } from "react-redux";
 
 export const RoundsPage = (props) => {
     const season =props.match.params.seasonid;
     const rounds = useRounds(season);
+    const dispatch = useDispatch();
 
     console.log("RoundsPage")
+    console.log(rounds)
+
+    /* armazena no estado todas as corridas que estão sendo carregadas */
+    if (rounds.length >0) {
+        dispatch(setRounds(rounds))
+        console.log("armazenou corridas na store")
+    }
 
     return (
       <div>
