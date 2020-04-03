@@ -14,6 +14,11 @@ export const RoundsPage = (props) => {
     const rounds = useRounds(season);
     const dispatch = useDispatch();
 
+    /* armazena no estado todas as corridas da temporada */
+    if (rounds.length >0) {
+      dispatch(setRounds(rounds))
+    }
+
     useEffect(() => {
         /* data/hora atual */
         let sysDate = new Date();
@@ -27,12 +32,6 @@ export const RoundsPage = (props) => {
                         sysDate.getHours() + ":" + sysDate.getMinutes() + ":" + sysDate.getSeconds() + ":" + sysDate.getMilliseconds()
         }
         dispatch(setHistory(history))
-
-        /* armazena no estado todas as corridas da temporada */
-        if (rounds.length >0) {
-            dispatch(setRounds(rounds))
-        }
-
     },[]);
 
     return (
