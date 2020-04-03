@@ -12,7 +12,8 @@ https://formulaone.netlify.com
 Bruno Gonçalves, matrícula 616968.
 
 #### Resumo
-O projeto consiste em uma aplicação para exibir informações da Fórmula 1. É possível visualizar todas as temporadas desde 1950, consultas as corridas, grid de chegadas e equipes/construtores.
+O projeto consiste em uma aplicação que fornece informações das temporadas da Fórmula 1.
+É possível visualizar todas as temporadas desde 1950, consultar as corridas, grid de chegadas e equipes/construtores.
 
 #### Requisitos do projeto
 
