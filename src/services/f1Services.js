@@ -4,7 +4,7 @@ export class f1Services {
     static limitPerPage = 71;
     
     static _withBaseUrl(path) {
-        return `http://ergast.com/api/f1/${path}`;
+        return `https://ergast.com/api/f1/${path}`;
     }
 
     static getSeasons() {

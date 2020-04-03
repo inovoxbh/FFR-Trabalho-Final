@@ -7,4 +7,4 @@ Link:
 Autor: Bruno Gonçalves de Alcântara
 inovox@gmail.com
 
-Esse projeto foi iniciado através do [Create React App](https://github.com/facebook/create-react-app).
+Colaboração: Enrique Bonifácio @enriqueboni80
