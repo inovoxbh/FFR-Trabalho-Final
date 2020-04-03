@@ -5,12 +5,18 @@ import {Header} from "../components/Header.js";
 import {NavBar} from "../components/NavBar.js";
 import {Footer} from "../components/Footer.js";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export const ResultsPage = (props) => {
     const paramsUrl = {
         seasonid: props.match.params.seasonid,
         roundid: props.match.params.roundid
     }
+
+    /* recupera o array de corridas da store */
+    const {rounds} = useSelector(state => state.roundsreducer);
+    console.log("corridas recuperadas da store")
+    console.log(rounds)
 
     const raceResults = useRaceResults(paramsUrl);
     const temResultados =raceResults.length;
