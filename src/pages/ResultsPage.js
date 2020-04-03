@@ -12,11 +12,16 @@ export const ResultsPage = (props) => {
         seasonid: props.match.params.seasonid,
         roundid: props.match.params.roundid
     }
+    let raceName
 
     /* recupera o array de corridas da store */
     const {rounds} = useSelector(state => state.roundsreducer);
     console.log("corridas recuperadas da store")
     console.log(rounds)
+    if (rounds.length >0)
+        raceName =" da corrida " + rounds[paramsUrl.roundid-1].raceName
+    else
+        raceName =""
 
     const raceResults = useRaceResults(paramsUrl);
     const temResultados =raceResults.length;
@@ -26,7 +31,7 @@ export const ResultsPage = (props) => {
         <Header />        
         <NavBar />
         <Link to={`/seasons/${paramsUrl.seasonid}/rounds`}>Temporada {paramsUrl.seasonid}</Link>
-        <h2>Resultado</h2>
+        <h2>Resultado {raceName}</h2>
         {temResultados > 0 ? 
             <ul style={{ listStyleType: "none" }}>
               {raceResults.map(r => (
