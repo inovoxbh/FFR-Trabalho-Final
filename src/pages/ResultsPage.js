@@ -16,8 +16,6 @@ export const ResultsPage = (props) => {
 
     /* recupera o array de corridas da store */
     const {rounds} = useSelector(state => state.roundsreducer);
-    console.log("corridas recuperadas da store")
-    console.log(rounds)
     if (rounds.length >0)
         raceName =" da corrida " + rounds[paramsUrl.roundid-1].raceName
     else

@@ -7,16 +7,11 @@ import {
   };
   
   export const roundsreducer = (state = initialState, action) => {
-    console.log("action payload")
-    console.log(action.payload)
-    console.log("action type")
-    console.log(action.type)
-
     switch (action.type) {
       case SET_ROU:
           return {
             ...state,
-            rounds: state.rounds.concat(action.payload)
+            rounds: action.payload
           };
 
       default:

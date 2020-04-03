@@ -12,7 +12,7 @@ export const Round = (props) => {
         <p>Data {props.date}</p>
         <Link to={urlResultado}>Grid de Chegada</Link>
         <br />
-        <Link to={urlEquipes}>Construtores</Link>
+        <Link to={urlEquipes}>Equipes</Link>
         <br />
     </div>
 }

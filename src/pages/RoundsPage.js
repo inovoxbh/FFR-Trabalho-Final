@@ -12,13 +12,9 @@ export const RoundsPage = (props) => {
     const rounds = useRounds(season);
     const dispatch = useDispatch();
 
-    console.log("RoundsPage")
-    console.log(rounds)
-
     /* armazena no estado todas as corridas que estão sendo carregadas */
     if (rounds.length >0) {
         dispatch(setRounds(rounds))
-        console.log("armazenou corridas na store")
     }
 
     return (
