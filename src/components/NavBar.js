@@ -6,5 +6,6 @@ export const NavBar = () => {
         <Link to="/">Página Inicial</Link><br />
         <Link to="/seasons">Todas Temporadas</Link><br />
         <Link to="/favorites">Temporadas Favoritas</Link><br />
+        <Link to="/history">Histórico Visitação</Link><br />
     </div>
 }

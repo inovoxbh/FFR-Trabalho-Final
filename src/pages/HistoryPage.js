@@ -5,16 +5,16 @@ import {NavBar} from "../components/NavBar.js";
 import {Footer} from "../components/Footer.js";
 
 
-export const FavoritesPage = () => {
-    const {favSeasons} = useSelector(state => state.favoritesreducer);
+export const HistoryPage = () => {
+    const {history} = useSelector(state => state.historyreducer);
 
     return (
         <div>
             <Header />
             <NavBar />
-            <h2>Temporadas Favoritas</h2>
+            <h2>Histórico de Visitação</h2>
             <ol>
-                {favSeasons.map((favRound,i) => (<li key={i}> Temporada {favRound} </li>))}
+                {history.map((history,i) => (<li key={i}> Temporada {history.seasonId} em {history.systemDate} </li>))}
             </ol>
             <Footer />
         </div>
