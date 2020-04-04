@@ -1,7 +1,8 @@
 import React from "react";
+import {HeaderCSS, TituloH1CSS} from "../visual/components.js"
 
 export const Header = () => {
-    return <div>
-        <h1>Histórico da Fórmula 1</h1>
-    </div>
+    return <HeaderCSS>
+        <TituloH1CSS>Histórico da Fórmula 1</TituloH1CSS>
+    </HeaderCSS>
 }

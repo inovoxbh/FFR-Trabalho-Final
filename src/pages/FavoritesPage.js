@@ -13,9 +13,9 @@ export const FavoritesPage = () => {
             <Header />
             <NavBar />
             <h2>Temporadas Favoritas</h2>
-            <ol>
+            <ul style={{ listStyleType: "none" }}>
                 {favSeasons.map((favRound,i) => (<li key={i}> Temporada {favRound} </li>))}
-            </ol>
+            </ul>
             <Footer />
         </div>
     )
