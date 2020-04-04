@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {LinkCSS, H2ListItemCSS} from "../visual/components.js"
 
 export const Round = (props) => {
     const urlBase =`/seasons/${props.season}/rounds/${props.round}`
@@ -7,12 +8,12 @@ export const Round = (props) => {
     const urlEquipes =urlBase + "/constructors"
 
     return <div>
-        <h2>Corrida #{props.round}</h2>
+        <H2ListItemCSS>Corrida #{props.round}</H2ListItemCSS>
         <h3>{props.raceName}</h3>
         <p>Data {props.date}</p>
-        <Link to={urlResultado}>Grid de Chegada</Link>
+        <LinkCSS><Link to={urlResultado}>Grid de Chegada</Link></LinkCSS>
         <br />
-        <Link to={urlEquipes}>Equipes</Link>
+        <LinkCSS><Link to={urlEquipes}>Equipes</Link></LinkCSS>
         <br />
     </div>
 }

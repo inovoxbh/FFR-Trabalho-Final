@@ -6,7 +6,7 @@ import {NavBar} from "../components/NavBar.js";
 import {Footer} from "../components/Footer.js";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+import {LinkCSS} from "../visual/components.js"
 
 export const TeamsPage = (props) => {
     const paramsUrl = {
@@ -30,7 +30,7 @@ export const TeamsPage = (props) => {
       <div>
         <Header />        
         <NavBar />
-        <Link to={`/seasons/${paramsUrl.seasonid}/rounds`}>Temporada {paramsUrl.seasonid}</Link>
+        <LinkCSS><Link to={`/seasons/${paramsUrl.seasonid}/rounds`}>Temporada {paramsUrl.seasonid}</Link></LinkCSS>
         <h2>Equipes {raceName}</h2>
         {temTeams > 0 ? 
             <ul style={{ listStyleType: "none" }}>

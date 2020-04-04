@@ -5,6 +5,12 @@ export const LayoutCSS =styled.main`
     text-align: center;
     background-color: #363636;
     color: white;
+    margin: 20px;
+
+    ul {
+        margin: 50px;
+        padding-inline-start: 0;
+    }
 `
 export const HeaderCSS =styled.header`
     font-size: 150px;
@@ -68,4 +74,11 @@ export const FooterCSS =styled.footer`
 `
 export const SeasonCSS =styled.div`
     margin: 20px;
+`
+export const H2ListItemCSS =styled.h2`
+    background-color: gray;
+    width: 100%;
+`
+export const SectionCSS =styled.section`
+    min-height: 100px;
 `
