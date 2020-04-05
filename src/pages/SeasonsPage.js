@@ -13,6 +13,7 @@ export const SeasonsPage = () => {
         <Header />                
         <NavBar />
         <h2>Temporadas</h2>
+        <p>Clique em uma temporada para visualizar as corridas. Você também pode favoritar ou desfavoritar uma corrida.</p>
         <ul style={{ listStyleType: "none" }}>
           {seasons.map(season => (
                               <li key={season}>

@@ -10,7 +10,7 @@ export const HomePage = () => {
           <Header />
           <NavBar />
           <SectionCSS>
-              <h2>Tudo sobre as temporadas da fórmula 1!</h2>
+              <p>Aqui você encontrará todas as informações das temporadas da Fórmula 1: corridas, grid de chegada e equipes!</p>
           </SectionCSS>
           <Footer />
         </div>

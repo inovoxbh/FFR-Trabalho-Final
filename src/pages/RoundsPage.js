@@ -39,6 +39,7 @@ export const RoundsPage = (props) => {
         <Header />        
         <NavBar />
         <h2>Corridas da temporada {season} </h2>
+        <p>Clique nas opções abaixo para visualizar o grid de chegada e as equipes.</p>
         <ul style={{ listStyleType: "none" }}>
           {rounds.map(r => (
                               <li key={r.round}>

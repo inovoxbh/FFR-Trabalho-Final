@@ -16,6 +16,7 @@ export const HistoryPage = () => {
             <NavBar />
             <SectionCSS>
                 <h2>Histórico de Visitação</h2>
+                <p>Aqui você encontra o histórico das temporadas que já visitou.</p>
                 {temHistorico > 0 ?
                     <ol>
                         {history.map((history,i) => (<li key={i}> Temporada {history.seasonId} em {history.systemDate} </li>))}

@@ -82,3 +82,31 @@ export const H2ListItemCSS =styled.h2`
 export const SectionCSS =styled.section`
     min-height: 100px;
 `
+
+export const FavButtonCSS =styled.button`
+    background-color: #E10600;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    font-size: 16px;
+    :hover {
+        font-size: 20px;
+    }
+`
+export const UnfavButtonCSS =styled.button`
+    background-color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    font-size: 16px;
+
+    :hover {
+        font-size: 20px;
+    }
+`
